@@ -1,4 +1,4 @@
-__author__ = 'Brown'
-a1=[1,2,4,5,7,]
-a1.reverse()
-print(a1)
+start=0
+end=5
+num=[72,22,33,45,56,62]
+print([start, end][num[start] < num[end]])
