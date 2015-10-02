@@ -1,3 +1,10 @@
-sum=0
-sum = (5 * 4 + 1) & 0xFFFFF
-print(sum)
+a=3
+b=2
+
+c=b
+print(a+b)
+print(a+c)
+
+c+=3
+print(a+b)
+print(a+c)
