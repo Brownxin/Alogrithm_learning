@@ -59,3 +59,6 @@ class Solution(object):
         """
         token=self.toRPN(s)
         return self.evalRPN(token)
+s='(4*4)+(6*4)+(5*3)+(6*7)+(5*3)+(3*2)'
+so=Solution().calculate(s)
+print(so)
