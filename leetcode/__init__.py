@@ -1,2 +1,11 @@
-for p, w in enumerate(('Thousand', 'Million', 'Billion'), 1):
-    print(p,w)
+import re
+
+s=" 3+5 / 2"
+print(s)
+s = re.sub(r'\d+', ' \g<0> ', s)
+# print(s)
+# s.strip()
+t=s.split()
+print(t)
+
+
