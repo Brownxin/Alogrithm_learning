@@ -7,21 +7,36 @@ class TreeNode(object):
         self.right = None
 
 class Solution(object):
-
-    def inorderTraversal(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[int]
-        """
-        def inorder(root):
-            if root==None:
-                return
-            root.left=self.inorderTraversal(root.left)
-            res.append(root.val)
-            root.right=self.inorderTraversal(root.right)
-            return
+    def inorderTraversal(self,root):
         if root==None:
             return []
         res=[]
-        inorder(root)
+        stack=[]
+        while stack or root:
+            if root:
+                stack.append(root)
+                root=root.left
+            else:
+                root=stack.pop()
+                res.append(root.val)
+                root=root.right
         return res
+
+    # Solution 1
+    # def inorderTraversal(self, root):
+    #     """
+    #     :type root: TreeNode
+    #     :rtype: List[int]
+    #     """
+    #     def inorder(root):
+    #         if root==None:
+    #             return
+    #         root.left=self.inorderTraversal(root.left)
+    #         res.append(root.val)
+    #         root.right=self.inorderTraversal(root.right)
+    #         return
+    #     if root==None:
+    #         return []
+    #     res=[]
+    #     inorder(root)
+    #     return res
